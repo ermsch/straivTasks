@@ -1,0 +1,13 @@
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background: rgba(255,255,255,35%);
+    backdrop-filter: blur(10px);
+    .products {
+        flex: 50%;
+        width: 100px;
+        padding: 20px;
+    }
+
+}

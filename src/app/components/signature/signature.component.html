@@ -1,0 +1,21 @@
+<div class="signature">
+    <h2>Task Nr.5 - Signature</h2>
+    <label for="canvas">Draw your signature</label>
+    <canvas #canvas width="320" height="100"></canvas>
+    <div *ngIf="base64 && !clear" class="base">
+        <div class="copyCode">
+            <label for="base64">your base64 code: </label>
+            <div class="copyNotif">
+                <span *ngIf="codeCopied" style="color: green">copied</span>
+                <img src="../../../assets/icons/copy.svg" [cdkCopyToClipboard]="base64" (click)="copied()">
+            </div>
+        </div>
+        <p>{{base64}}</p>
+    </div>
+    <div class="buttons">
+        <button class="btn btn-primary submit" (click)="showBase64()">Submit Signature</button>
+        <button class="btn btn-secondary try" (click)="clearCanvas()">
+            <img src="../../../assets/icons/reload.svg" alt="">
+        </button>
+    </div>
+</div>

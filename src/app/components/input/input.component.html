@@ -1,0 +1,13 @@
+<div class="form">
+    <h2>Task Nr.1 - Validation</h2>
+    <h5>Welcome {{nickname}}</h5>
+    <form [formGroup]="logForm" class="logForm">
+        <label for="nickname">Enter your Nickname: </label>
+        <input type="text" placeholder="eg. Noobmaster69" formControlName="nickname" class="form-control" [(ngModel)]="nicknameClearer">
+        <span *ngIf="logForm.controls.nickname.hasError('maxlength') && logForm.controls.nickname.dirty" style="color: red; margin: 10px 0 0 0">{{errMessageMax}}</span>
+        <span *ngIf="logForm.controls.nickname.hasError('minlength') && logForm.controls.nickname.dirty" style="color: red; margin: 10px 0 0 0">{{errMessageMin}}</span>
+        <button class="btn btn-primary" [disabled]="logForm.invalid" (click)="getNickname()">Submit</button>
+    </form>
+</div>
+
+

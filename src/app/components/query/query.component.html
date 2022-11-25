@@ -1,0 +1,11 @@
+<div class="productList">
+    <div class="products" *ngFor="let product of products">
+        <h4>{{product.name}}</h4>
+        <p>Price: {{product.price | currency:'EUR':true }}</p>
+        <button [routerLink]="['/products']" 
+                [queryParams]="{id: product.id, name: product.name, price: product.price}" 
+                (click)="detailsToConsole()" 
+                class="btn btn-secondary">Details to console
+        </button>
+    </div>
+</div>

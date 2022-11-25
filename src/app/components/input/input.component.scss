@@ -1,0 +1,31 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 20px;
+    .logForm {
+        display: flex;
+        flex-direction: column;
+        label {
+            margin: 0 0 5px 0;
+        }
+        span {
+            text-align: center;
+        }
+    }
+    h2 {
+        text-align: center;
+    }
+    h5 {
+        margin: 0 0 10px 0;
+    }
+    button {
+        margin: 10px;
+        border-radius: 20px;
+        border: none;
+    }
+}
+
+.form-control {
+    border-radius: 20px;
+}
