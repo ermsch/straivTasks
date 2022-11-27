@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -14,7 +14,7 @@ export class InputComponent implements OnInit {
   min: number = 5
   nickname: any = "stranger"
   nicknameClearer: string
-  
+
   //ErrorTips
   errMessageMax: string = `nickname can contain at max ${this.max} characters`
   errMessageMin: string = `nickname must contain at least ${this.min} characters`

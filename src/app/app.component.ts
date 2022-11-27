@@ -14,15 +14,15 @@ export class AppComponent implements OnInit, OnDestroy {
   //When user has made changes, execute a function before leaving and ask if they want to leave the site
   //Can't use alert or custom message during beforeunload
 
-  // @HostListener('window:beforeunload', ['$event'])
-  //  beforeUnloadHandler(event: Event) {
-  //     this.customFunction()
-  //     return false 
-  //  } 
+  @HostListener('window:beforeunload', ['$event'])
+   beforeUnloadHandler(event: Event) {
+      this.customFunction()
+      return false 
+   } 
 
-  // customFunction() {
-  //   console.log("hello, this text is fired by a custom function")
-  // }
+  customFunction() {
+    console.log("hello, this text is fired by a custom function")
+  }
 
 
   //Tast Nr.4 
